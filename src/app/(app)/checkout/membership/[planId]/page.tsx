@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import CheckoutContent from './checkout-content';
@@ -18,9 +17,14 @@ function LoadingFallback() {
   );
 }
 
-export default function MembershipCheckoutPage({ params }: { params: { planId: string } }) {
-  // The planId is passed from the page component to the client component
-  // No need to use useParams() here in the page.tsx file itself.
+// ✅ 用明確 interface 解決 Firebase build 型別錯誤
+interface PageProps {
+  params: {
+    planId: string;
+  };
+}
+
+export default function MembershipCheckoutPage({ params }: PageProps) {
   return (
     <Suspense fallback={<LoadingFallback />}>
       <CheckoutContent planId={params.planId} />

@@ -76,7 +76,7 @@ export default function ShoeRepairServicePage() {
       <Card className="shadow-lg">
         <CardHeader>
           <Button variant="ghost" size="sm" asChild className="mb-4 self-start text-muted-foreground hover:text-foreground">
-            <Link href="/shoe-repair">
+            <Link href="/shoe-repair" legacyBehavior>
               <ArrowLeft className="mr-2 h-4 w-4" /> 返回維修專區
             </Link>
           </Button>
@@ -133,7 +133,10 @@ export default function ShoeRepairServicePage() {
           </div>
           
           <div className="border-t pt-8 text-center">
-            <Link href={`/shoe-repair/booking?service=${serviceId}`} passHref>
+            <Link
+              href={`/shoe-repair/booking?service=${serviceId}`}
+              passHref
+              legacyBehavior>
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6">
                 <CalendarCheck className="mr-2 h-5 w-5" /> 預約此維修服務
               </Button>

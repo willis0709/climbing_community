@@ -66,19 +66,19 @@ export function UserNav() {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <Link href="/profile" passHref>
+          <Link href="/profile" passHref legacyBehavior>
             <DropdownMenuItem>
               <UserIcon className="mr-2 h-4 w-4" />
               <span>個人資料</span>
             </DropdownMenuItem>
           </Link>
-          <Link href="/settings" passHref>
+          <Link href="/settings" passHref legacyBehavior>
             <DropdownMenuItem>
               <Settings className="mr-2 h-4 w-4" />
               <span>帳號設定</span>
             </DropdownMenuItem>
           </Link>
-           <Link href="/membership" passHref>
+           <Link href="/membership" passHref legacyBehavior>
             <DropdownMenuItem>
               <Award className="mr-2 h-4 w-4" />
               <span>會員方案</span>

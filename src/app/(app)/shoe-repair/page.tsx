@@ -80,14 +80,13 @@ export default function ShoeRepairPage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Link href="/shoe-repair/booking" passHref>
+          <Link href="/shoe-repair/booking" passHref legacyBehavior>
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6">
               <CalendarCheck className="mr-2 h-5 w-5" /> 快速預約維修
             </Button>
           </Link>
         </CardContent>
       </Card>
-
       <section className="space-y-8">
         <div className="text-center">
           <h2 className="text-3xl font-semibold">我們的維修服務</h2>
@@ -118,7 +117,11 @@ export default function ShoeRepairPage() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Link href={`/shoe-repair/service/${service.id}`} passHref className="w-full">
+                <Link
+                  href={`/shoe-repair/service/${service.id}`}
+                  passHref
+                  className="w-full"
+                  legacyBehavior>
                   <Button variant="outline" className="w-full">
                     查看詳情 <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -128,9 +131,7 @@ export default function ShoeRepairPage() {
           ))}
         </div>
       </section>
-
       <Separator />
-
       <section className="space-y-8">
         <div className="text-center">
           <h2 className="text-3xl font-semibold">維修流程</h2>
@@ -151,9 +152,7 @@ export default function ShoeRepairPage() {
             </Card>
         </div>
       </section>
-      
       <Separator />
-
       <section className="space-y-8">
         <div className="text-center">
           <h2 className="text-3xl font-semibold">客戶怎麼說？</h2>
@@ -187,9 +186,7 @@ export default function ShoeRepairPage() {
             <Button variant="link">查看更多評價 <ArrowRight className="ml-1 h-4 w-4" /></Button>
         </div>
       </section>
-
       <Separator />
-
       <section className="space-y-6">
         <div className="text-center">
             <h2 className="text-3xl font-semibold">常見問題 (FAQ)</h2>
@@ -210,16 +207,14 @@ export default function ShoeRepairPage() {
                     <p className="text-sm text-muted-foreground">A: 我們主要使用業界標準的高品質攀岩橡膠。特定品牌（如 Vibram XS Grip2, GP Sole）可供選擇，部分特殊橡膠可能需額外收費或為限量提供。</p>
                 </div>
                 <div className="text-center mt-4">
-                     <Link href="/shoe-repair/faq" passHref>
+                     <Link href="/shoe-repair/faq" passHref legacyBehavior>
                         <Button variant="outline">查看所有常見問題</Button>
                     </Link>
                 </div>
             </CardContent>
         </Card>
       </section>
-
       <Separator />
-
       <section className="space-y-6">
         <div className="text-center">
             <h2 className="text-3xl font-semibold flex items-center justify-center">
@@ -240,26 +235,24 @@ export default function ShoeRepairPage() {
             </CardContent>
         </Card>
       </section>
-
       <Card className="bg-primary/5 border-primary/20 p-6 md:p-8 text-center">
         <CardTitle className="text-2xl mb-3">準備好讓您的愛鞋重獲新生了嗎？</CardTitle>
         <CardDescription className="text-muted-foreground mb-6 max-w-xl mx-auto">
           無論是日常練習還是挑戰極限，一雙狀態良好的岩鞋都是您最佳的夥伴。立即預約我們的專業維修服務！
         </CardDescription>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/shoe-repair/booking" passHref>
+            <Link href="/shoe-repair/booking" passHref legacyBehavior>
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                     <CalendarCheck className="mr-2 h-5 w-5" /> 預約維修服務
                 </Button>
             </Link>
-            <Link href="/contact" passHref>
+            <Link href="/contact" passHref legacyBehavior>
                 <Button size="lg" variant="outline">
                     <MessageSquareQuote className="mr-2 h-5 w-5" /> 聯繫我們諮詢
                 </Button>
             </Link>
         </div>
       </Card>
-
     </div>
   );
 }

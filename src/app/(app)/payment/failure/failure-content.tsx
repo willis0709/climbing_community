@@ -47,7 +47,7 @@ export default function FailureContent() {
              <Button variant="outline" onClick={handleRetry} className="w-full sm:w-auto">
                <RefreshCw className="mr-2 h-4 w-4" /> 重試付款
             </Button>
-            <Link href="/membership" passHref>
+            <Link href="/membership" passHref legacyBehavior>
               <Button className="w-full sm:w-auto">
                  <ArrowLeft className="mr-2 h-4 w-4" /> 返回方案選擇
               </Button>

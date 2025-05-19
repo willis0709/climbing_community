@@ -324,7 +324,7 @@ export function UploadForm() {
                     <li>觀看會員專屬影片與進階訓練資源</li>
                 </ul>
                 <div className="pt-2">
-                    <Link href="/membership" passHref>
+                    <Link href="/membership" passHref legacyBehavior>
                         <Button variant="default" className="w-full">了解更多並加入</Button>
                     </Link>
                 </div>

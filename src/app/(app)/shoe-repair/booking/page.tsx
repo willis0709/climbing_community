@@ -13,7 +13,7 @@ export default function ShoeRepairBookingPage() {
       <Card>
         <CardHeader>
            <Button variant="ghost" size="sm" asChild className="mb-4 self-start text-muted-foreground hover:text-foreground">
-            <Link href="/shoe-repair">
+            <Link href="/shoe-repair" legacyBehavior>
               <ArrowLeft className="mr-2 h-4 w-4" /> 返回維修專區
             </Link>
           </Button>

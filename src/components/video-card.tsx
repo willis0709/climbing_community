@@ -23,7 +23,7 @@ export function VideoCard({ video }: VideoCardProps) {
   const cardHref = isAccessible ? `/video/${video.id}` : `/membership?redirect=/video/${video.id}`;
 
   return (
-    <Link href={cardHref} passHref>
+    <Link href={cardHref} passHref legacyBehavior>
       <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-200 h-full flex flex-col group">
         <CardHeader className="p-0 relative">
           <Image

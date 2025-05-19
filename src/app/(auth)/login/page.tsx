@@ -44,7 +44,10 @@ export default function LoginPage() {
   return (
     <Card className="w-full max-w-md shadow-xl">
       <CardHeader className="text-center">
-        <Link href="/" className="flex items-center justify-center gap-2 text-xl font-semibold mb-2">
+        <Link
+          href="/"
+          className="flex items-center justify-center gap-2 text-xl font-semibold mb-2"
+          legacyBehavior>
           <MountainIcon className="h-7 w-7 text-primary" />
           <span className="font-bold text-2xl tracking-tight">Climbers Community</span>
         </Link>

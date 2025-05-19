@@ -34,12 +34,12 @@ export default function SuccessContent() {
         <CardContent className="space-y-4">
           <p>感謝您的訂閱！您現在可以享有會員專屬的所有功能與福利。</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
-            <Link href="/" passHref>
+            <Link href="/" passHref legacyBehavior>
               <Button variant="outline" className="w-full sm:w-auto">
                 <Home className="mr-2 h-4 w-4" /> 返回首頁
               </Button>
             </Link>
-            <Link href="/profile" passHref>
+            <Link href="/profile" passHref legacyBehavior>
               <Button className="w-full sm:w-auto">
                 <User className="mr-2 h-4 w-4" /> 前往個人資料
               </Button>

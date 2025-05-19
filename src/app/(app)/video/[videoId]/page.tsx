@@ -79,7 +79,7 @@ export default function VideoPage() {
             <p className="mt-4">Join our community to unlock this video and many other benefits, including exclusive content, advanced AI analysis, and personalized training tips.</p>
           </CardContent>
           <CardFooter className="flex justify-center">
-            <Link href={`/membership?redirect=/video/${video.id}`} passHref>
+            <Link href={`/membership?redirect=/video/${video.id}`} passHref legacyBehavior>
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
                 <Star className="mr-2 h-5 w-5" /> View Membership Plans
               </Button>
@@ -209,14 +209,14 @@ export default function VideoPage() {
               <CardTitle>Uploader</CardTitle>
             </CardHeader>
             <CardContent className="flex items-center gap-4">
-              <Link href={`/profile?userId=${video.uploader.id}`} passHref>
+              <Link href={`/profile?userId=${video.uploader.id}`} passHref legacyBehavior>
                 <Avatar className="h-16 w-16 border-2 border-primary">
                   <AvatarImage src={video.uploader.avatarUrl} alt={video.uploader.name} />
                   <AvatarFallback>{video.uploader.name.substring(0,2)}</AvatarFallback>
                 </Avatar>
               </Link>
               <div>
-                <Link href={`/profile?userId=${video.uploader.id}`} passHref>
+                <Link href={`/profile?userId=${video.uploader.id}`} passHref legacyBehavior>
                   <h3 className="text-lg font-semibold hover:text-primary">{video.uploader.name}</h3>
                 </Link>
                 <p className="text-sm text-muted-foreground">{mockUsers.find(u => u.id === video.uploader.id)?.climbingExperience || 'Climber'}</p>

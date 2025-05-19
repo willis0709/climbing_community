@@ -136,7 +136,7 @@ mockUsers[2].uploadedVideos = [mockVideos[2]];
 
 
 export const mockTrainingLogs: TrainingLogEntry[] = [
-    ...mockUsers[0].trainingLog ?? [],
+    ...(mockUsers[0].trainingLog ?? []),
     { id: 'tl3', date: new Date(Date.now() - 86400000 * 1).toISOString(), notes: 'Endurance climbing on auto-belay.', duration: '1.5 hours', intensity: 'Medium' },
     { id: 'tl4', date: new Date(Date.now() - 86400000 * 3).toISOString(), notes: 'Rest day, light stretching.', duration: '30 mins', intensity: 'Low' },
 ];

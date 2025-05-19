@@ -27,7 +27,6 @@ export default function CommunityPage() {
           </CardDescription>
         </CardHeader>
       </Card>
-
       <Tabs defaultValue="challenges" className="w-full">
         <TabsList className="grid w-full grid-cols-2 md:grid-cols-3">
           <TabsTrigger value="challenges"><Flame className="mr-2 h-4 w-4" /> Challenges</TabsTrigger>
@@ -91,7 +90,11 @@ export default function CommunityPage() {
               </div>
               <div className="space-y-4">
                 {mockForumTopics.map((topic) => (
-                  <Link href={`/community/forum/${topic.id}`} key={topic.id} className="block hover:bg-muted/10 rounded-lg transition-colors">
+                  <Link
+                    href={`/community/forum/${topic.id}`}
+                    key={topic.id}
+                    className="block hover:bg-muted/10 rounded-lg transition-colors"
+                    legacyBehavior>
                     <Card className="shadow-md hover:shadow-lg">
                       <CardHeader className="flex flex-row items-start gap-3 space-y-0">
                         <Avatar className="h-10 w-10 border">
@@ -180,7 +183,7 @@ export default function CommunityPage() {
               {currentUser && !currentUser.isMember && (
                  <div className="mt-6 p-4 border-t text-center">
                     <p className="text-muted-foreground mb-2">Want to sponsor climbers and appear on the leaderboard?</p>
-                    <Link href="/membership">
+                    <Link href="/membership" legacyBehavior>
                         <Button variant="default">
                             <Star className="mr-2 h-4 w-4"/> Become a Member
                         </Button>

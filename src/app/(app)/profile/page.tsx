@@ -55,14 +55,14 @@ export default function ProfilePage() {
 
   if (!displayedUser) {
     return (
-        <div className="flex flex-col items-center justify-center min-h-[calc(100vh-12rem)] text-center">
-            <UserIcon className="h-16 w-16 text-muted-foreground mb-4" />
-            <h2 className="text-2xl font-semibold mb-2">User Profile Not Found</h2>
-            <p className="text-muted-foreground mb-6">The user profile you are looking for does not exist or could not be loaded.</p>
-            <Link href="/" passHref>
-                <Button variant="outline">Go to Homepage</Button>
-            </Link>
-        </div>
+      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-12rem)] text-center">
+        <UserIcon className="h-16 w-16 text-muted-foreground mb-4" />
+        <h2 className="text-2xl font-semibold mb-2">User Profile Not Found</h2>
+        <p className="text-muted-foreground mb-6">The user profile you are looking for does not exist or could not be loaded.</p>
+        <Link href="/" passHref legacyBehavior>
+            <Button variant="outline">Go to Homepage</Button>
+        </Link>
+      </div>
     );
   }
 
@@ -87,7 +87,6 @@ export default function ProfilePage() {
   return (
     <div className="space-y-8">
       <ProfileHeader user={displayedUser} />
-
       <Tabs defaultValue={defaultTab} className="w-full">
         <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 gap-2">
           {(isOwnProfile && displayedUser.isMember && displayedUser.membershipTier !== 'None') && (
@@ -161,7 +160,7 @@ export default function ProfilePage() {
                     <Card className="bg-muted/50 p-4">
                         <div className="flex items-center justify-between">
                             <h4 className="font-semibold text-md flex items-center"><ShieldCheck className="mr-2 h-4 w-4 text-accent"/> 獨家內容訪問</h4>
-                            <Link href="/#exclusive-content-mock" passHref>
+                            <Link href="/#exclusive-content-mock" passHref legacyBehavior>
                                 <Button variant="outline" size="sm">瀏覽獨家內容</Button>
                             </Link>
                         </div>
@@ -179,7 +178,7 @@ export default function ProfilePage() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3 justify-end pt-4">
-                    <Link href="/membership" passHref>
+                    <Link href="/membership" passHref legacyBehavior>
                         <Button variant="outline">查看所有方案 / 變更方案</Button>
                     </Link>
                 </div>

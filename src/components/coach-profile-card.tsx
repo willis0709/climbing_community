@@ -94,10 +94,10 @@ export function CoachProfileCard({ coach, isMember }: CoachProfileCardProps) {
             <h4 className="font-semibold text-sm text-foreground/90 mb-2 flex items-center"><Briefcase className="mr-1.5 h-4 w-4 text-accent"/> Services Offered:</h4>
             <div className="space-y-2">
               {coach.servicesOffered.slice(0, 2).map(service => ( // Show first 2 services, add "more" if needed
-                <div key={service.name} className="p-2.5 bg-muted/50 rounded-md border border-border/70 text-xs">
+                (<div key={service.name} className="p-2.5 bg-muted/50 rounded-md border border-border/70 text-xs">
                   <p className="font-medium text-foreground/90">{service.name}</p>
                   <p className="text-muted-foreground">{service.price} {service.description ? `- ${service.description}`: ''}</p>
-                </div>
+                </div>)
               ))}
               {coach.servicesOffered.length > 2 && <p className="text-xs text-center text-primary hover:underline cursor-pointer" onClick={() => toast({title: "View All Services", description: "This would show a modal or navigate to a detailed coach page."})}>View all services...</p>}
             </div>
@@ -116,9 +116,9 @@ export function CoachProfileCard({ coach, isMember }: CoachProfileCardProps) {
           </div>
         )}
          {coach.hourlyRate && !coach.servicesOffered?.length && ( // Only show if no specific services listed
-             <p className="text-sm font-semibold text-accent flex items-center mt-2">
-                <DollarSign className="mr-1.5 h-4 w-4" /> General Consultation Rate: ${coach.hourlyRate}/hour
-            </p>
+             (<p className="text-sm font-semibold text-accent flex items-center mt-2">
+               <DollarSign className="mr-1.5 h-4 w-4" />General Consultation Rate: ${coach.hourlyRate}/hour
+                           </p>)
         )}
 
       </CardContent>

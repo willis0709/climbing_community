@@ -24,7 +24,11 @@ interface PageProps {
   };
 }
 
-export default function MembershipCheckoutPage({ params }: PageProps) {
+export default async function MembershipCheckoutPage({
+  params,
+}: {
+  params: { planId: string };
+}) {
   return (
     <Suspense fallback={<LoadingFallback />}>
       <CheckoutContent planId={params.planId} />

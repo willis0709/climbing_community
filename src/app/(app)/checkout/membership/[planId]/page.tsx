@@ -17,13 +17,7 @@ function LoadingFallback() {
   );
 }
 
-// ✅ 用明確 interface 解決 Firebase build 型別錯誤
-interface PageProps {
-  params: {
-    planId: string;
-  };
-}
-
+// ✅ Firebase Hosting build 要求 page 是 async function
 export default async function MembershipCheckoutPage({
   params,
 }: {

@@ -17,7 +17,7 @@ function LoadingFallback() {
   );
 }
 
-// ✅ Firebase Hosting build 要求 page 是 async function
+// ✅ 注意這裡的 async 關鍵字不能少！
 export default async function MembershipCheckoutPage({
   params,
 }: {

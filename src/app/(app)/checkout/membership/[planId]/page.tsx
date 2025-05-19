@@ -17,7 +17,7 @@ function LoadingFallback() {
   );
 }
 
-// ✅ 注意這裡的 async 關鍵字不能少！
+// ✅ 改成 async 並直接使用 `params` inline 型別
 export default async function MembershipCheckoutPage({
   params,
 }: {

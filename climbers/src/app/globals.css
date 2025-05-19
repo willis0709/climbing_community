@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%; /* Very light, slightly desaturated blue */
+    --foreground: 220 30% 20%; /* Dark, desaturated blue */
+
+    --muted: 210 30% 95%; /* Light desaturated blue/grey */
+    --muted-foreground: 220 20% 45%; /* Mid desaturated blue/grey */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 20%;
+
+    --border: 210 20% 90%; /* Light desaturated blue/grey border */
+    --input: 210 20% 90%; /* Light desaturated blue/grey for input background */
+
+    --primary: 220 50% 55%; /* Medium desaturated blue */
+    --primary-foreground: 0 0% 100%; /* White for contrast on blue */
+
+    --secondary: 0 50% 60%; /* Medium desaturated red */
+    --secondary-foreground: 0 0% 100%; /* White for contrast on red */
+
+    --accent: 0 70% 65%; /* Desaturated red for accents */
+    --accent-foreground: 0 0% 100%; /* White for contrast on accent red */
+
+    --destructive: 0 70% 50%; /* Desaturated red */
+    --destructive-foreground: 0 0% 100%;
+
+    --ring: 0 70% 65%; /* Accent red for focus rings */
+
+    --radius: 0.5rem;
+
+    --chart-1: 220 50% 55%; /* primary */
+    --chart-2: 0 50% 60%; /* secondary */
+    --chart-3: 0 70% 65%; /* accent */
+    --chart-4: 210 40% 60%; /* a different blue shade */
+    --chart-5: 0 40% 70%; /* a different red shade */
+
+    /* Sidebar specific colors */
+    --sidebar-background: 210 25% 97%; 
+    --sidebar-foreground: 220 30% 20%; 
+    --sidebar-primary: 220 50% 55%; 
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 70% 65%; 
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 20% 88%;
+    --sidebar-ring: 0 70% 65%;
+  }
+
+  .dark {
+    --background: 220 30% 15%; /* Dark desaturated blue */
+    --foreground: 210 20% 90%; /* Light desaturated blue/grey */
+
+    --muted: 220 25% 25%; /* Darker desaturated blue/grey */
+    --muted-foreground: 210 15% 60%; /* Mid-light desaturated blue/grey */
+
+    --popover: 220 30% 15%;
+    --popover-foreground: 210 20% 90%;
+
+    --card: 220 30% 18%; /* Slightly lighter than background */
+    --card-foreground: 210 20% 90%;
+
+    --border: 220 20% 30%;
+    --input: 220 20% 30%;
+
+    --primary: 220 60% 65%; /* Lighter desaturated blue for dark mode */
+    --primary-foreground: 220 20% 10%; /* Very dark blue */
+
+    --secondary: 0 60% 70%; /* Lighter desaturated red for dark mode */
+    --secondary-foreground: 0 0% 10%; /* Very dark red/black */
+
+    --accent: 0 80% 70%; /* Lighter, slightly more vibrant red for dark mode accent */
+    --accent-foreground: 220 30% 15%; /* Dark background color for contrast */
+
+    --destructive: 0 70% 60%; /* Lighter desaturated red */
+    --destructive-foreground: 0 0% 100%;
+
+    --ring: 0 80% 70%;
+
+    --chart-1: 220 60% 65%;
+    --chart-2: 0 60% 70%;
+    --chart-3: 0 80% 70%;
+    --chart-4: 210 50% 70%;
+    --chart-5: 0 50% 80%;
+    
+    /* Sidebar specific colors */
+    --sidebar-background: 220 25% 12%; 
+    --sidebar-foreground: 210 20% 85%; 
+    --sidebar-primary: 220 60% 65%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 0 80% 70%;
+    --sidebar-accent-foreground: 220 30% 15%;
+    --sidebar-border: 220 20% 25%;
+    --sidebar-ring: 0 80% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export', // 這是最重要的一行，讓 next export 有作用
-    images: {
-      unoptimized: true // Firebase Hosting 不支援 Image Optimization
-    }
-  };
-  
-  module.exports = nextConfig;
+  images: {
+    unoptimized: true // 這是為了讓 Firebase Hosting 可顯示圖片，Vercel 可以移除
+  },
+};
+
+module.exports = nextConfig;
